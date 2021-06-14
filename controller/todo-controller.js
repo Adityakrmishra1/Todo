@@ -7,15 +7,15 @@ var bodyParser = require('body-parser');
 var data = [{
 		item: 'aditya mishra'
 	}, {
-		item: 'fuck big ass.... '
+		item: 'Ad. '
 	}, {
-		item: 'fuck some more big ass...'
+		item: 'addd...'
 	},
 	{
-		item: 'Fucking is awesome..........'
+		item: ' awesome..........'
 	},
 	{
-		item: 'Fuck some tities..........'
+		item: 'addd..........'
 	}
 ];
 
