@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<title>TO do</title>
+
+	<link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="boundary">
+			<div class="top">
+				<h3>The TO-DO App</h3>
+			</div>
+			<hr class="hr1">
+			<div class="add">
+				<form>
+					<input type="text" placeholder="Add item"></input>
+					<button type="submit">Add</button>
+				</form>
+			</div>
+			<hr>
+			<div class="content">
+
+				<ul class="content-ul">
+					<% for(var i=0; i<todos.length; i++){ %>
+					<li><%= todos[i].item %></li>
+					<% }%>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script src="assets/todo-list.js"></script>
+</body>
+
+</html>
