@@ -1,21 +1,15 @@
-var bodyParser = require('body-parser');
-// var urlencodedParser = bodyParser.urlencoded({
-// 	extended: false
-// });
-
-
 var data = [{
-		item: 'aditya mishra'
+		item: 'item1'
 	}, {
-		item: 'Ad. '
+		item: 'item2'
 	}, {
-		item: 'addd...'
+		item: 'item3'
 	},
 	{
-		item: ' awesome..........'
+		item: 'item4'
 	},
 	{
-		item: 'addd..........'
+		item: 'item5'
 	}
 ];
 
@@ -27,16 +21,20 @@ module.exports = {
 				todos: data
 			});
 		});
+		app.get('/about', function (req, res) {
+			res.send('HELLO');
+		});
 		app.post('/todo', function (req, res) {
-
-			console.log("todo-conto;" + JSON.stringify(req.body));
-
+			// console.log(req);
 			data.push(req.body);
 			res.send(data);
+			console.log(data);
 
 		});
-		app.delete('/todo', function (req, res) {
-
+		app.delete('/todo/:item', function (req, res) {
+			console.log(JSON.stringify("delete" + req.params.item));
+			data = data.filter(i => i.item != req.params.item);
+			res.send(data);
 		});
 	}
 };
